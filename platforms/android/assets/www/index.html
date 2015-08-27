@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Note to Self</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="note.css">
+    <script src="note.js"></script>
+</head>
+
+<body>
+    <div id="contenedor">
+        <div id="formulario">
+            <form>
+                <fieldset>
+                    <h1>Notas</h1>
+                    <br/>
+                    <label for="color">Color de la nota:</label>
+                    <select id="color" name="color">
+						<option value="LightYellow" selected>Amarrillo</option>
+						<option value="PaleGreen">Verde</option>
+						<option value="LightBlue">Azul</option>
+					</select> 
+					<br/><br/>
+                    <input type="text" id="nota_text" placeholder="Introduce nota">
+                    <input type="button" id="add_boton" value="Añade nueva nota">
+                    <br/>
+                    <span id="aviso" hidden>El campo no puede estar vacio</span>
+                    <br/>
+                </fieldset>
+                <br/>
+				<input type="button" id="borrar" value="Borrar Base de Datos">
+				<input type="button" id="borrarValores" value="Borrar Todos los Datos">
+				<br/><br/>
+                 <fieldset>
+                    <h3>Buscar</h3>
+                    <br/>
+                    <label for="buscarColor">Por Color</label>	
+                     <select id="buscarColor" name="buscarColor">
+						<option value="LightYellow" selected>Amarrillo</option>
+						<option value="PaleGreen">Verde</option>
+						<option value="LightBlue">Azul</option>
+					</select> 				
+                    <input type="button" id="buscarColorB" value="Buscar Notas">
+                    <br/><br/>
+                    <label for="buscarTexto">Por Texto (uno sólo)</label>					
+                    <input type="text" id="buscarTexto" placeholder="nota a buscar">
+                    <input type="button" id="buscarTextoB" value="Buscar nota">
+					<br/><br/>
+                    <label for="buscarTextoMul">Por Texto (multiple)</label>					
+                    <input type="text" id="buscarTextoMul" placeholder="nota a buscar">
+                    <input type="button" id="buscarTextoMulB" value="Buscar nota">
+					<br/><br/>
+					<label for="buscarClave">Por clave</label>					
+                    <input type="text" id="buscarClave" placeholder="clave a buscar">
+                    <input type="button" id="buscarClaveB" value="Buscar nota">
+					<br/><br/>				
+                    <input type="button" id="buscarTodos" value="Ver todas">
+                    <br/>
+                </fieldset>
+                
+            </form>
+        </div>
+        <div id="muestra">
+            <ul id="notas">
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
